@@ -10,28 +10,11 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :content %>
-    <%= f.text_field :content %>
+    <%= form.text_area :content, rows: 4 %>
   </div>
-
-  <div class="field">
-    <%= f.label :goal_id %>
-    <%= f.text_field :goal_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :position %>
-    <%= f.number_field :position %>
-  </div>
-
-  <div class="field">
-    <%= f.label :done %>
-    <%= f.check_box :done %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions text-right">
+    <%= link_to "Close", new_goal_todo_path(goal), class: "btn btn-secondary", remote: true %>
+    <%= form.submit %>
   </div>
 <% end %>
